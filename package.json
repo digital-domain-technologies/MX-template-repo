@@ -1,0 +1,22 @@
+{
+  "$intent": {
+    "purpose": "npm package configuration for this Intent Repository project",
+    "update-instructions": "Update version when releasing, add dependencies as needed",
+    "related-files": ["MX.yaml", "master-mx.yaml"]
+  },
+  "name": "{{PROJECT_NAME}}",
+  "version": "0.1.0",
+  "description": "{{PROJECT_DESCRIPTION}}",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "echo 'Add your lint command here'",
+    "test": "echo 'Add your test command here'",
+    "build": "echo 'Add your build command here'"
+  },
+  "keywords": [],
+  "author": "{{OWNER_NAME}}",
+  "license": "UNLICENSED"
+}

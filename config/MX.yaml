@@ -1,0 +1,26 @@
+# MX.yaml
+# Folder-level metadata for config/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  Shared configuration files for linting, formatting, editing,
+  and other development tools.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+
+defaults:
+  documentation:
+    required: false  # Config files use $intent keys instead
+
+update-instructions:
+  method: |
+    1. Add tool configuration files at this level
+    2. Include $intent key in JSON config files
+    3. System documentation goes in system/ subdirectory

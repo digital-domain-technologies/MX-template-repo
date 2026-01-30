@@ -1,0 +1,28 @@
+# MX.yaml
+# Folder-level metadata for config/system/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  System-level documentation including folder layouts,
+  architecture overviews, and configuration guides.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+
+defaults:
+  documentation:
+    required: true
+    format: "markdown"
+    frontmatter-required: true
+
+update-instructions:
+  method: |
+    1. Document system-level configuration here
+    2. Keep folder-layout.md in sync with actual structure
+    3. Include YAML frontmatter in all markdown files

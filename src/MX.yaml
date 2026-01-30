@@ -1,0 +1,34 @@
+# MX.yaml
+# Folder-level metadata for src/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  Source code for the project.
+  Contains implementation files, components, and modules.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+  formatter: "prettier"
+  linter: "eslint"
+
+defaults:
+  documentation:
+    required: true
+    format: "jsdoc"  # Or appropriate doc format for your language
+  testing:
+    coverage-threshold: 70
+    required-types:
+      - "unit"
+
+update-instructions:
+  method: |
+    1. Follow project coding standards
+    2. Include JSDoc or equivalent documentation
+    3. Write tests for new functionality
+    4. Use @intent comments for file-level metadata when needed

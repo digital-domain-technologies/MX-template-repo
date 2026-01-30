@@ -1,0 +1,31 @@
+# MX.yaml
+# Folder-level metadata for .claude/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  Claude Code AI assistant configuration.
+  Contains custom commands, git hooks, and reusable skills/workflows.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+
+documentation:
+  required: false  # Configuration files are self-documenting
+
+defaults:
+  ai:
+    context-level: "full"
+    editable: true
+
+update-instructions:
+  method: |
+    1. Add custom commands to commands/ subdirectory
+    2. Add git hooks to hooks/ subdirectory
+    3. Add reusable workflows to skills/ subdirectory
+    4. Test changes with Claude Code before committing

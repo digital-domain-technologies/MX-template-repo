@@ -1,0 +1,93 @@
+# MX.yaml
+# Repository Root - DEFAULT SETTINGS
+#
+# These settings can be overridden by folder-level MX.yaml files
+# and file-level frontmatter or $intent keys.
+#
+# For guidance on Intent Repository patterns, see:
+# https://github.com/digital-domain-technologies/intent-cms
+
+intent:
+  version: "1.0"
+  level: "repository"
+
+# ============================================================================
+# PROJECT METADATA
+# ============================================================================
+
+project:
+  name: "{{PROJECT_NAME}}"
+  description: "{{PROJECT_DESCRIPTION}}"
+  version: "0.1.0"
+  status: "development"  # development, beta, production, deprecated
+
+ownership:
+  team: "{{PROJECT_TEAM}}"
+  contacts:
+    - name: "{{OWNER_NAME}}"
+      email: "{{OWNER_EMAIL}}"
+      role: "maintainer"
+
+# ============================================================================
+# DEFAULT SETTINGS (can be overridden)
+# ============================================================================
+
+defaults:
+  # Documentation requirements
+  documentation:
+    required: true
+    format: "markdown"
+    frontmatter-required: true
+
+  # Style settings
+  style:
+    inherit: true
+    formatter: "prettier"
+    linter: "eslint"
+
+  # Review settings
+  review:
+    required-approvals: 1
+    auto-assign: false
+
+  # Testing settings
+  testing:
+    coverage-threshold: 70
+    required-types:
+      - "unit"
+
+  # AI assistant settings
+  ai:
+    context-level: "full"  # full, summary, minimal
+    suggestions: true
+    editable: true
+
+# ============================================================================
+# REPOSITORY STRUCTURE
+# ============================================================================
+
+structure:
+  docs: "docs/"
+  source: "src/"
+  packages: "packages/"
+  scripts: "scripts/"
+  config: "config/"
+
+# ============================================================================
+# TEMPLATE INSTRUCTIONS
+# ============================================================================
+#
+# When using this template:
+# 1. Replace all {{PLACEHOLDER}} values with your project details
+# 2. Adjust default settings to match your project needs
+# 3. Update the structure section if your project uses different paths
+# 4. Remove this instruction block when done
+#
+# Placeholders to replace:
+#   {{PROJECT_NAME}} - Your project name
+#   {{PROJECT_DESCRIPTION}} - Brief project description
+#   {{PROJECT_TEAM}} - Team name
+#   {{OWNER_NAME}} - Primary maintainer name
+#   {{OWNER_EMAIL}} - Primary maintainer email
+#
+# ============================================================================

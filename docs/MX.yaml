@@ -1,0 +1,32 @@
+# MX.yaml
+# Folder-level metadata for docs/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  Project documentation organised by type:
+  - architecture/ for Architecture Decision Records (ADRs)
+  - for-ai/ for AI-optimised documentation
+  - specifications/ for PRDs and technical specs
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+
+defaults:
+  documentation:
+    required: true
+    format: "markdown"
+    frontmatter-required: true
+
+update-instructions:
+  method: |
+    1. Place conceptual documentation at this level
+    2. Place ADRs in architecture/ subdirectory
+    3. Place AI-friendly docs in for-ai/ subdirectory
+    4. Place PRDs and specs in specifications/ subdirectory
+    5. All markdown files must have YAML frontmatter

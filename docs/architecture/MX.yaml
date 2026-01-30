@@ -1,0 +1,32 @@
+# MX.yaml
+# Folder-level metadata for docs/architecture/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  Architecture Decision Records (ADRs) documenting significant
+  technical decisions and their rationale.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+  rules:
+    - rule-id: "adr-format"
+      description: "Use standard ADR format with Status, Context, Decision, Consequences"
+
+defaults:
+  documentation:
+    required: true
+    format: "markdown"
+    frontmatter-required: true
+
+update-instructions:
+  method: |
+    1. Create new ADR files with format: NNNN-title.md
+    2. Include Status, Context, Decision, and Consequences sections
+    3. Never modify accepted ADRs - create superseding ADRs instead
+    4. Include YAML frontmatter with date and status

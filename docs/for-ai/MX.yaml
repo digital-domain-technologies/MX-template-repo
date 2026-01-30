@@ -1,0 +1,32 @@
+# MX.yaml
+# Folder-level metadata for docs/for-ai/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  Documentation optimised for AI agent consumption.
+  Structured for machine parsing with clear metadata.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+
+defaults:
+  documentation:
+    required: true
+    format: "markdown"
+    frontmatter-required: true
+  ai:
+    context-level: "full"
+    priority: "high"
+
+update-instructions:
+  method: |
+    1. Write documentation with AI agents as primary audience
+    2. Use structured formats that machines can parse
+    3. Include rich metadata in frontmatter
+    4. Avoid ambiguous language

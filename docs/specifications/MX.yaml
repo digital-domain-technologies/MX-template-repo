@@ -1,0 +1,29 @@
+# MX.yaml
+# Folder-level metadata for docs/specifications/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  Product Requirements Documents (PRDs) and technical specifications.
+  Formal documentation of features, requirements, and designs.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+
+defaults:
+  documentation:
+    required: true
+    format: "markdown"
+    frontmatter-required: true
+
+update-instructions:
+  method: |
+    1. Use PRD format for feature specifications
+    2. Include version, status, and date in frontmatter
+    3. Update version when making significant changes
+    4. Keep specifications in sync with implementation

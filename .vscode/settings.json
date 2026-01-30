@@ -1,0 +1,12 @@
+{
+  "$intent": {
+    "purpose": "VS Code workspace settings",
+    "note": "This file is in .mxignore - user-specific settings"
+  },
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "[markdown]": {
+    "editor.wordWrap": "on"
+  }
+}

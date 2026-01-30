@@ -1,0 +1,28 @@
+# MX.yaml
+# Folder-level metadata for scripts/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  Build, deployment, and automation scripts.
+  Shell scripts, Node.js scripts, and other automation tools.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+
+defaults:
+  documentation:
+    required: true
+    format: "comments"  # Scripts use inline comments
+
+update-instructions:
+  method: |
+    1. Include header comment with purpose in each script
+    2. Use descriptive filenames
+    3. Make shell scripts executable (chmod +x)
+    4. Document usage in script header or README

@@ -1,0 +1,6 @@
+{
+  "$intent": {
+    "purpose": "Claude Code local settings - user-specific, not committed",
+    "note": "This file is in .mxignore"
+  }
+}

@@ -1,0 +1,79 @@
+# master-mx.yaml
+# Repository Master - ENFORCED POLICIES
+#
+# These rules CANNOT be overridden by folders or files.
+# Edit this file to define your project's non-negotiable standards.
+#
+# For guidance on Intent Repository patterns, see:
+# https://github.com/digital-domain-technologies/intent-cms
+
+intent:
+  version: "1.0"
+  level: "repository-master"
+
+# ============================================================================
+# ENFORCED POLICIES - Cannot be overridden
+# ============================================================================
+
+enforced:
+  # Security policies
+  security:
+    secrets-detection: true
+    secrets-action: "warn"  # block, warn, ignore
+    blocked-patterns: []    # Add patterns like "eval(" if needed
+
+  # Compliance requirements
+  compliance:
+    require-ownership: false      # Set to true to require ownership metadata
+    require-licence-headers: false  # Set to true to require licence headers
+
+  # Style enforcement
+  style:
+    language: "en-GB"  # British English - change to "en-US" if preferred
+    forbidden-words:
+      # Avoid exaggerated marketing language
+      - "revolutionary"
+      - "game-changing"
+      - "best-in-class"
+      - "world-class"
+      - "cutting-edge"
+    avoid-counting: true  # Avoid "12 features" or "three benefits"
+
+  # AI assistant policies
+  ai:
+    allow-code-generation: true
+    require-human-review: false   # Set to true for stricter review
+    context-sharing: "internal-only"  # internal-only, public, none
+
+# ============================================================================
+# DEFAULTS - Can be overridden by folders/files
+# ============================================================================
+
+defaults:
+  ownership:
+    team: "{{PROJECT_TEAM}}"  # Replace with your team name
+    contact: "{{PROJECT_CONTACT}}"  # Replace with contact email
+
+  style:
+    formatter: "prettier"
+    linter: "eslint"
+
+  documentation:
+    required: true
+    format: "markdown"
+
+  review:
+    required-approvals: 1
+
+# ============================================================================
+# TEMPLATE INSTRUCTIONS
+# ============================================================================
+#
+# When using this template:
+# 1. Replace {{PROJECT_TEAM}} with your team name
+# 2. Replace {{PROJECT_CONTACT}} with your contact email
+# 3. Adjust enforced policies to match your project requirements
+# 4. Add any project-specific blocked patterns or compliance rules
+# 5. Remove this instruction block when done
+#
+# ============================================================================

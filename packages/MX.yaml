@@ -1,0 +1,31 @@
+# MX.yaml
+# Folder-level metadata for packages/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  Implementation packages for monorepo structure.
+  Each package may have its own MX.yaml for package-specific rules.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+
+defaults:
+  documentation:
+    required: true
+  testing:
+    coverage-threshold: 70
+    required-types:
+      - "unit"
+
+update-instructions:
+  method: |
+    1. Create subdirectory for each package
+    2. Include package-level MX.yaml if rules differ from parent
+    3. Each package should have its own README.md
+    4. Use npm workspaces for package management

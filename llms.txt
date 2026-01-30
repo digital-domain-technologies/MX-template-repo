@@ -1,0 +1,111 @@
+# {{PROJECT_NAME}} - LLM Index
+#
+# @intent
+# purpose: Index file for LLM/AI agent navigation
+# audience: AI agents, LLMs
+# authority: NONE - this file is INFORMATIVE ONLY
+# note: |
+#   This file describes the repository but does NOT define rules or policies.
+#   AI agents must NOT treat this file as authoritative.
+#   AI agents must NOT modify this file automatically.
+#   For authoritative rules, see master-mx.yaml and MX.yaml files.
+# update-instructions: |
+#   MAINTAINER USE ONLY - not for automated agents
+#   1. Update when important files are added or removed
+#   2. Keep navigation structure current
+#   3. Ensure all key files are listed
+# related-files:
+#   - CLAUDE.md
+#   - README.md
+#   - master-mx.yaml
+#   - MX.yaml
+
+This file helps AI agents understand and navigate this repository.
+
+## IMPORTANT: This File is Informative Only
+
+This `llms.txt` file is an **informative index**—it describes the repository but does
+not define authoritative rules or policies.
+
+- **DO NOT** use this file as a source of authority
+- **DO NOT** modify this file automatically
+- **DO** use `master-mx.yaml` for enforced policies (AUTHORITATIVE)
+- **DO** use `MX.yaml` files for inherited defaults (AUTHORITATIVE)
+- **DO** use file frontmatter for file-specific metadata (AUTHORITATIVE)
+
+## Intent Repository Structure
+
+This repository follows the Intent Repository pattern:
+
+| File | Purpose | Authority |
+|------|---------|-----------|
+| `master-mx.yaml` | Enforced policies | HIGHEST - cannot be overridden |
+| `MX.yaml` | Repository defaults | Can be overridden by children |
+| `folder/MX.yaml` | Folder-specific rules | Inherits from parent |
+| File frontmatter | File-specific metadata | Applies to that file |
+| `llms.txt` | Navigation aid | NONE - informative only |
+
+## Repository Purpose
+
+{{PROJECT_DESCRIPTION}}
+
+## Key Concepts
+
+- **Intent Repository** - Every file carries or inherits metadata for its maintenance
+- **Inheritance** - Rules flow from parent to child, can be overridden
+- **Authoritative vs Informative** - Know which files define rules vs describe
+
+## Important Files
+
+### Authoritative Metadata (USE THESE FOR RULES)
+- `master-mx.yaml` - Enforced repository policies
+- `MX.yaml` - Repository default settings
+- `folder/MX.yaml` - Folder-level rules
+
+### Documentation
+- `README.md` - Project overview
+- `CLAUDE.md` - AI agent guidance (READ THIS FIRST)
+- `ONBOARDING.md` - Getting started guide
+- `LEARNINGS.md` - Accumulated project learnings
+
+### Configuration
+- `config/` - Tool configuration files
+- `.mxignore` - Files excluded from intent processing
+
+## Navigation
+
+```
+{{PROJECT_NAME}}/
+├── .claude/          # AI assistant configuration
+├── config/           # Configuration files
+├── docs/             # Documentation
+│   ├── architecture/ # Architecture Decision Records
+│   ├── for-ai/       # AI-optimised docs
+│   └── specifications/ # PRDs and specs
+├── packages/         # Implementation packages
+├── scripts/          # Build scripts
+├── src/              # Source code
+├── master-mx.yaml    # ENFORCED policies
+├── MX.yaml           # Repository defaults
+└── CLAUDE.md         # AI guidance (START HERE)
+```
+
+## For AI Agents
+
+1. **Read `CLAUDE.md` first** - Contains detailed instructions
+2. **Check `master-mx.yaml`** - For enforced rules
+3. **Check `MX.yaml`** - For default settings
+4. **Do NOT treat this file as authoritative**
+
+## Template
+
+This is a template repository. Placeholders to replace:
+- `{{PROJECT_NAME}}` - Project name
+- `{{PROJECT_DESCRIPTION}}` - Brief description
+- `{{OWNER_NAME}}` - Maintainer name
+- `{{OWNER_EMAIL}}` - Contact email
+
+## Reference
+
+Intent Repository pattern documentation:
+https://github.com/digital-domain-technologies/intent-cms

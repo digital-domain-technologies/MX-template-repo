@@ -1,0 +1,61 @@
+# .mxignore
+# Intent Repository Ignore File
+#
+# Inherits all patterns from .gitignore automatically.
+# Files matching these patterns are excluded from intent metadata processing:
+# - Not scanned for metadata
+# - Not included in coverage reports
+# - Not validated for missing metadata
+# - Not indexed by the query engine
+#
+# Pattern syntax follows .gitignore conventions.
+
+# ============================================================================
+# Inherited from .gitignore (automatic)
+# ============================================================================
+# All patterns in .gitignore are automatically included.
+
+# ============================================================================
+# Third-party and vendored code
+# ============================================================================
+vendor/
+third_party/
+node_modules/
+
+# ============================================================================
+# Lock files (auto-generated)
+# ============================================================================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ============================================================================
+# IDE and editor configuration (user-specific)
+# ============================================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ============================================================================
+# Build outputs
+# ============================================================================
+dist/
+build/
+out/
+coverage/
+
+# ============================================================================
+# Test fixtures intentionally without metadata
+# ============================================================================
+test/fixtures/invalid/
+test/fixtures/no-metadata/
+
+# ============================================================================
+# Claude Code local settings (user-specific)
+# ============================================================================
+.claude/settings.local.json
+
+# ============================================================================
+# End of .mxignore
+# ============================================================================

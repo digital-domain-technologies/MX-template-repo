@@ -1,0 +1,22 @@
+# MX.yaml
+# Folder-level metadata for .github/
+
+intent:
+  version: "1.0"
+  level: "folder"
+
+purpose: |
+  GitHub-specific configuration including Actions workflows,
+  issue templates, and pull request templates.
+
+ownership:
+  inherit: true
+
+style:
+  inherit: true
+
+update-instructions:
+  method: |
+    1. Add CI/CD workflows to workflows/ subdirectory
+    2. Use YAML format for all workflow files
+    3. Test workflows in a branch before merging to main

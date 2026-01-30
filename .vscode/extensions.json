@@ -1,0 +1,11 @@
+{
+  "$intent": {
+    "purpose": "Recommended VS Code extensions",
+    "note": "This file is in .mxignore - user-specific settings"
+  },
+  "recommendations": [
+    "davidanson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "redhat.vscode-yaml"
+  ]
+}
