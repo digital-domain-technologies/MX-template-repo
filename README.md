@@ -103,3 +103,18 @@ npm install
 
 - **Author:** {{OWNER_NAME}}
 - **Email:** {{OWNER_EMAIL}}
+
+---
+
+## Template Credits
+
+This MX Template Repository was created by:
+
+- **Tom Cranstoun** - Principal Consultant at Digital Domain Technologies Ltd, creator of the Intent Repository pattern and Machine Experience (MX) methodology
+- **Claude (Opus 4.5)** - Anthropic's AI assistant, collaborating on implementation and documentation
+
+The Intent Repository pattern enables self-documenting repositories where every file carries or inherits the metadata required for its own maintenance.
+
+- **Intent CMS Documentation:** https://github.com/digital-domain-technologies/intent-cms
+- **Tom's Website:** https://allabout.network
+- **Tom's LinkedIn:** https://www.linkedin.com/in/tom-cranstoun/
