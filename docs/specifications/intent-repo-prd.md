@@ -80,6 +80,7 @@ Code repositories contain implicit knowledge that isn't captured anywhere:
 - Who owns this code and what's the review process?
 
 This knowledge lives in:
+
 - README files that go stale
 - Wiki pages nobody updates
 - Tribal knowledge that leaves when people do
@@ -139,6 +140,7 @@ A repository structure where:
 **FR-1.1** Each folder may contain a metadata file defining rules for that folder and its descendants.
 
 **FR-1.2** Folder metadata must support:
+
 - Style rules (formatting, naming conventions, patterns)
 - Ownership (team, individuals, contact information)
 - Review requirements (approval process, required reviewers)
@@ -148,6 +150,7 @@ A repository structure where:
 - Build and deployment context (environment, targets, pipelines)
 
 **FR-1.3** Folder metadata must support inheritance modifiers:
+
 - Inherit all (default behaviour)
 - Override specific rules
 - Extend rules (add to inherited set)
@@ -160,6 +163,7 @@ A repository structure where:
 **FR-2.1** Individual files may contain or reference metadata specific to that file.
 
 **FR-2.2** File metadata must support:
+
 - Purpose and description
 - Update instructions (how to modify this file)
 - Source references (where data comes from for generated files)
@@ -167,6 +171,7 @@ A repository structure where:
 - Override rules (exceptions to folder-level rules)
 
 **FR-2.3** File metadata must be embeddable in formats that support it:
+
 - Comments in code files (JS, CSS, HTML, Python, etc.)
 - Frontmatter in markdown
 - Metadata fields in JSON, YAML, XML
@@ -190,6 +195,7 @@ A repository structure where:
 ### FR-4: Inheritance Resolution
 
 **FR-4.1** When resolving metadata for a file, the system must:
+
 1. Check for file-level metadata (embedded or sidecar)
 2. Walk up the folder tree, collecting folder metadata
 3. Merge metadata according to inheritance rules
@@ -234,12 +240,14 @@ A repository structure where:
 **FR-6.4** The system must detect inheritance conflicts.
 
 **FR-6.5** Validation must be runnable as:
+
 - CLI command
 - Pre-commit hook
 - CI/CD pipeline step
 - IDE integration
 
 **FR-6.6** Validation must report:
+
 - Files missing required metadata
 - Invalid metadata format
 - Schema violations
@@ -268,12 +276,14 @@ A repository structure where:
 **FR-8.2** CI/CD integration for validation on pull request.
 
 **FR-8.3** IDE extensions for:
+
 - Viewing effective metadata for current file
 - Editing metadata with schema validation
 - Navigating to related files
 - Showing inheritance chain
 
 **FR-8.4** AI assistant integration:
+
 - Provide effective metadata as context for code generation
 - Validate generated code against metadata rules
 - Suggest metadata for new files based on location
@@ -287,6 +297,7 @@ A repository structure where:
 **FR-9.3** The ignore file must support additional patterns beyond .gitignore for intent-specific exclusions.
 
 **FR-9.4** Ignored paths must:
+
 - Not be scanned for metadata
 - Not appear in coverage reports
 - Not trigger validation errors for missing metadata
@@ -301,6 +312,7 @@ A repository structure where:
 **FR-10.1** The Intent Repository pattern must extend beyond repositories to local machine configuration.
 
 **FR-10.2** The inheritance hierarchy must be:
+
 1. Machine-level master (system-wide defaults)
 2. Device-level master (per-drive/volume defaults)
 3. User-level defaults (home directory)
@@ -311,21 +323,25 @@ A repository structure where:
 8. File-level
 
 **FR-10.3** Machine-level master metadata must:
+
 - Apply to all users and all drives on the machine
 - Define organisation-wide policies when deployed centrally
 - Be located in a system configuration path
 
 **FR-10.4** Device-level master metadata must:
+
 - Apply to all content on a specific drive or volume
 - Support different policies for different storage (e.g., external drives, network mounts)
 - Be located at the root of each drive/volume
 
 **FR-10.5** User-level metadata must support:
+
 - User-specific defaults (home directory)
 - Project workspace overrides
 - Per-folder customisation
 
 **FR-10.6** Repository-level master metadata must:
+
 - Define repository-wide policies that cannot be overridden by folders or files
 - Enforce architectural decisions, security requirements, and compliance rules
 - Be located at the repository root with a distinct filename
@@ -342,6 +358,7 @@ A repository structure where:
 **FR-10.11** The system must support querying the full inheritance chain to show where each value originates.
 
 **FR-10.12** Master files (machine, device, repository) must support marking specific rules as:
+
 - Overridable (default behaviour, children can override)
 - Non-overridable (enforced, children cannot override)
 - Extendable (children can add to but not remove from)
@@ -355,6 +372,7 @@ A repository structure where:
 **FR-11.3** Sub-repository detection must identify boundaries by the presence of a master-mx.yaml file.
 
 **FR-11.4** The inheritance chain for a file in a sub-repository must be:
+
 1. Machine-level master
 2. Device-level master
 3. User-level defaults
@@ -383,6 +401,7 @@ A repository structure where:
 **FR-12.3** Hub authority policies cannot be overridden by child repositories—the hub has ultimate authority over its declared children.
 
 **FR-12.4** The inheritance chain for a file in a child repository of a hub must be:
+
 1. Machine-level master
 2. Device-level master
 3. User-level defaults
@@ -398,6 +417,7 @@ A repository structure where:
 **FR-12.6** Hub policies take precedence over all child repository policies, including child master-mx.yaml enforced rules.
 
 **FR-12.7** The hub-mx.yaml must specify:
+
 - List of child repositories under its authority
 - Policies that apply to all children
 - Per-child policy overrides where needed
@@ -409,6 +429,7 @@ A repository structure where:
 **FR-12.10** The system must clearly indicate when resolved metadata includes hub-enforced values that cannot be overridden.
 
 **FR-12.11** Hub authority must work across repository boundaries, supporting:
+
 - Repositories on the same machine
 - Repositories on different machines (via hub reference URL or path)
 - Repositories in different version control systems
@@ -505,6 +526,7 @@ A repository structure where:
 **Consumer Layer:** Tools and integrations that use intent metadata—CLI, IDE extensions, CI/CD pipelines, AI assistants.
 
 **Intent Repo Core:**
+
 - **Metadata Parser:** Extracts metadata from folder files, embedded comments, frontmatter, and sidecars.
 - **Inheritance Resolver:** Walks the folder tree and merges metadata according to inheritance rules.
 - **Validation Engine:** Checks metadata against schemas and reports violations.
@@ -531,7 +553,7 @@ D:\master-mx.yaml                      # Windows secondary drive
 /mnt/network-share/master-mx.yaml      # Network mount
 
 # User level (outside repositories)
-~/.config/intent/
+~/.mx-config/intent/
 ├── MX.yaml                      # User-level defaults
 └── .mxignore                    # User-level ignores
 
@@ -547,7 +569,7 @@ D:\master-mx.yaml                      # Windows secondary drive
 
 # Inheritance chain example:
 # /etc/intent/master-mx.yaml           (machine master)
-#   └── /home/user/.config/intent/MX.yaml  (user defaults)
+#   └── /home/user/.mx-config/intent/MX.yaml  (user defaults)
 #       └── /home/user/projects/MX.yaml    (workspace defaults)
 #           └── repo/master-mx.yaml        (repo master - enforced)
 #               └── repo/MX.yaml           (repo defaults)
@@ -605,7 +627,7 @@ repository/
 │       ├── MX.yaml              # Inherits from repo/master-mx.yaml
 │       └── src/
 │           └── helpers.ts
-└── config/
+└── mx-config/
     ├── MX.yaml                  # Config rules
     ├── webpack.config.js        # Embedded metadata
     └── tsconfig.json            # Reserved key metadata
@@ -725,6 +747,7 @@ The `llms.txt` file is an **informative index** that helps AI agents and LLMs un
 **FR-A.3** The `llms.txt` file **should not** be modified by automated agents. It is maintained by repository owners to reflect the current state of the repository.
 
 **FR-A.4** Authoritative metadata comes from:
+
 - `master-mx.yaml` for enforced policies
 - `MX.yaml` files for inherited defaults and rules
 - File-level frontmatter or `$intent` keys for file-specific metadata
@@ -732,6 +755,7 @@ The `llms.txt` file is an **informative index** that helps AI agents and LLMs un
 ### Content Guidelines
 
 The `llms.txt` file should include:
+
 - Repository purpose and description
 - Key concepts and terminology
 - Important file locations
@@ -887,7 +911,7 @@ defaults:
 ```
 
 ```yaml
-# ~/.config/intent/MX.yaml
+# ~/.mx-config/intent/MX.yaml
 # User-level defaults applied to all repositories
 
 intent:
@@ -1382,11 +1406,13 @@ For JSON configuration files, use the `$intent` reserved key:
 ```
 
 **Placement rules:**
+
 - `$intent` should be the first key in the object for visibility
 - The `$intent` key is ignored by applications reading the config
 - All standard intent metadata fields are supported
 
 **Examples of JSON files that benefit from $intent:**
+
 - `package.json` - npm configuration
 - `tsconfig.json` - TypeScript configuration
 - `.markdownlint.json` - Linting rules
@@ -1440,7 +1466,7 @@ intent:
 
 related-files:
   - ./related-doc.md
-  - ../config/MX.yaml
+  - ../mx-config/MX.yaml
 
 update-instructions:
   source: "Where updates come from"
@@ -1484,17 +1510,20 @@ update-instructions:
 ### F.6: Distinguishing Authoritative vs Informative Files
 
 **Authoritative files** (define rules, enforce policies):
+
 - `master-mx.yaml` - Cannot be overridden
 - `MX.yaml` files - Can be overridden by children
 - File frontmatter - Applies to that file
 - `$intent` keys in JSON - Applies to that file
 
 **Informative files** (describe, do not enforce):
+
 - `llms.txt` - Navigation aid only
 - `README.md` - Human documentation
 - Comments in code - Context for humans/AI
 
 AI agents must:
+
 - Follow rules from authoritative files
 - Use informative files for discovery only
 - Never modify informative files automatically
@@ -1522,6 +1551,7 @@ yarn.lock
 ```
 
 These files:
+
 - Are not scanned for metadata
 - Do not appear in coverage reports
 - Do not trigger validation errors
@@ -1576,7 +1606,7 @@ repository/
 │   ├── settings.json           # With $intent key
 │   └── extensions.json         # With $intent key
 │
-├── config/                     # Configuration files
+├── mx-config/                     # Configuration files
 │   ├── MX.yaml                 # Folder metadata
 │   ├── .editorconfig           # Editor config (sidecar if needed)
 │   └── .markdownlint.json      # With $intent key

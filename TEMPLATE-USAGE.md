@@ -63,6 +63,7 @@ Search and replace these placeholders throughout the repository:
 | `{{LICENSE_INFO}}` | License details | `MIT License` |
 
 **Quick replace command:**
+
 ```bash
 # macOS/Linux
 find . -type f \( -name "*.md" -o -name "*.yaml" -o -name "*.json" -o -name "*.txt" \) \
@@ -117,7 +118,7 @@ MX-template-repo/
 ├── .claude/                    # AI assistant configuration
 ├── .github/                    # GitHub workflows
 ├── .vscode/                    # VS Code settings
-├── config/system/              # System documentation
+├── mx-config/system/              # System documentation
 ├── docs/                       # Documentation structure
 │   ├── architecture/           # ADRs
 │   ├── for-ai/                 # AI-optimised docs
@@ -145,10 +146,11 @@ MX-template-repo/
 ### Folder MX.yaml Files
 
 Every folder has an `MX.yaml` file defining its purpose and rules:
+
 - `.claude/MX.yaml`
 - `.github/MX.yaml`
-- `config/MX.yaml`
-- `config/system/MX.yaml`
+- `mx-config/MX.yaml`
+- `mx-config/system/MX.yaml`
 - `docs/MX.yaml`
 - `docs/architecture/MX.yaml`
 - `docs/for-ai/MX.yaml`

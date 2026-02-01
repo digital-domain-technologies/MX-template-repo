@@ -47,7 +47,7 @@ Single source of truth for the repository structure.
 │
 ├── .vscode/                    # VS Code settings (in .mxignore)
 │
-├── config/                     # Configuration files
+├── mx-config/                     # Configuration files
 │   ├── MX.yaml                 # Folder metadata
 │   └── system/                 # System documentation
 │       ├── MX.yaml             # Folder metadata
@@ -86,22 +86,29 @@ Single source of truth for the repository structure.
 ## Directory Purposes
 
 ### `.claude/`
+
 Claude Code AI assistant configuration. Contains commands, hooks, and skills.
 
-### `config/`
+### `mx-config/`
+
 Shared configuration files. System documentation in `system/` subdirectory.
 
 ### `docs/`
+
 All project documentation:
+
 - `architecture/` - Architecture Decision Records
 - `for-ai/` - Documentation optimised for AI agents
 - `specifications/` - PRDs and technical specs
 
 ### `packages/`
+
 Implementation packages for monorepo structure.
 
 ### `scripts/`
+
 Build, deployment, and automation scripts.
 
 ### `src/`
+
 Source code for the project.

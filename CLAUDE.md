@@ -67,6 +67,7 @@ These files describe but do NOT define rules:
 | Comments in code | Context for readers | **NONE** |
 
 **IMPORTANT:**
+
 - **DO NOT** treat `llms.txt` as authoritative
 - **DO NOT** modify `llms.txt` automatically
 - **DO** read `master-mx.yaml` and `MX.yaml` for actual rules
@@ -81,7 +82,7 @@ These files describe but do NOT define rules:
 │   ├── commands/               # Custom CLI commands
 │   ├── hooks/                  # Git hooks
 │   └── skills/                 # Reusable workflows
-├── config/                     # Configuration files
+├── mx-config/                     # Configuration files
 │   └── system/                 # System documentation
 ├── docs/                       # Documentation
 │   ├── architecture/           # Architecture Decision Records
@@ -180,6 +181,7 @@ When determining rules for a file:
 4. **Apply file metadata** - Frontmatter or `$intent` for final overrides
 
 Example inheritance chain:
+
 ```
 master-mx.yaml (enforced: style.language = "en-GB")
     └── MX.yaml (defaults: testing.coverage = 70)
@@ -189,6 +191,7 @@ master-mx.yaml (enforced: style.language = "en-GB")
 ```
 
 Result for `helpers.ts`:
+
 - `style.language = "en-GB"` (from master, cannot override)
 - `testing.coverage = 90` (from file frontmatter)
 

@@ -63,7 +63,7 @@ This repository follows the **Intent Repository** pattern where every file carri
 {{PROJECT_NAME}}/
 ├── .claude/                    # AI assistant configuration
 ├── .github/                    # GitHub workflows
-├── config/                     # Configuration files
+├── mx-config/                     # Configuration files
 │   └── system/                 # System documentation
 ├── docs/                       # Documentation
 │   ├── architecture/           # Architecture Decision Records
