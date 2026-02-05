@@ -38,3 +38,6 @@ test-results/
 tmp/
 temp/
 *.tmp
+
+# Obsolete MX format (use .mx.yaml.md instead)
+.mx.yaml
