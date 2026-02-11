@@ -11,9 +11,9 @@ keywords:
   - mistakes
 schema:
   type: "HowTo"
-ai-content-policy: "extract-with-attribution"
-ai-freshness: "weekly"
-ai-attribution: "required"
+sop-content-policy: "extract-with-attribution"
+sop-freshness: "weekly"
+sop-attribution: "required"
 
 intent:
   purpose: "Capture institutional knowledge and prevent repeated mistakes"

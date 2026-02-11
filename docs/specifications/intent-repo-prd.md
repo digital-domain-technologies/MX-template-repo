@@ -18,9 +18,9 @@ canonical: "https://allabout.network/docs/intent-repo-prd.html"
 schema:
   type: "TechArticle"
   articleSection: "Product Documentation"
-ai-content-policy: "extract-with-attribution"
-ai-freshness: "monthly"
-ai-attribution: "required"
+sop-content-policy: "extract-with-attribution"
+sop-freshness: "monthly"
+sop-attribution: "required"
 
 data-lake:
   query-id: "dlq-2026-01-30-intent-repo-prd"
@@ -1456,9 +1456,9 @@ keywords:
   - keyword2
 schema:
   type: "TechArticle"  # or HowTo, BlogPosting, etc.
-ai-content-policy: "extract-with-attribution"
-ai-freshness: "weekly"  # or monthly, daily
-ai-attribution: "required"
+sop-content-policy: "extract-with-attribution"
+sop-freshness: "weekly"  # or monthly, daily
+sop-attribution: "required"
 
 intent:
   purpose: "What this document achieves"

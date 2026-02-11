@@ -12,9 +12,9 @@ keywords:
 canonical: "{{PROJECT_URL}}"
 schema:
   type: "SoftwareSourceCode"
-ai-content-policy: "extract-with-attribution"
-ai-freshness: "monthly"
-ai-attribution: "required"
+sop-content-policy: "extract-with-attribution"
+sop-freshness: "monthly"
+sop-attribution: "required"
 
 intent:
   purpose: "Primary entry point and overview for the {{PROJECT_NAME}} repository"

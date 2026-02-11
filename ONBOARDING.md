@@ -11,9 +11,9 @@ keywords:
   - contributing
 schema:
   type: "HowTo"
-ai-content-policy: "extract-with-attribution"
-ai-freshness: "monthly"
-ai-attribution: "required"
+sop-content-policy: "extract-with-attribution"
+sop-freshness: "monthly"
+sop-attribution: "required"
 
 intent:
   purpose: "Help new contributors get started with the repository"

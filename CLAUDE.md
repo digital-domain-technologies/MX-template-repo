@@ -7,13 +7,13 @@ lastmod: {{DATE}}
 version: "0.1.0"
 keywords:
   - claude-code
-  - ai-guidance
+  - sop-guidance
   - intent-repository
 schema:
   type: "TechArticle"
-ai-content-policy: "extract-with-attribution"
-ai-freshness: "weekly"
-ai-attribution: "required"
+sop-content-policy: "extract-with-attribution"
+sop-freshness: "weekly"
+sop-attribution: "required"
 
 intent:
   purpose: "Provide authoritative context and guidance for AI assistants"

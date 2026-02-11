@@ -10,8 +10,8 @@ keywords:
   - repository-layout
 schema:
   type: "TechArticle"
-ai-content-policy: "extract-with-attribution"
-ai-freshness: "monthly"
+sop-content-policy: "extract-with-attribution"
+sop-freshness: "monthly"
 
 intent:
   purpose: "Document the repository structure as single source of truth"

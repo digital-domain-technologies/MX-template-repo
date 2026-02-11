@@ -12,8 +12,8 @@ keywords:
   - setup
 schema:
   type: "HowTo"
-ai-content-policy: "extract-with-attribution"
-ai-freshness: "monthly"
+sop-content-policy: "extract-with-attribution"
+sop-freshness: "monthly"
 
 intent:
   purpose: "Guide users through setting up a new project from this template"
