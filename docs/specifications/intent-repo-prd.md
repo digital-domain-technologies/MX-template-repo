@@ -2,11 +2,11 @@
 title: "Product Requirements Document: Intent Repository"
 description: "PRD for a repository structure where code, configuration, and documentation carry their own maintenance context through hierarchical metadata inheritance."
 author: "Tom Cranstoun"
-date: 2026-01-30
-lastmod: 2026-01-30
+created: 2026-01-30
+modified: 2026-01-30
 version: "0.1.0"
 status: "Draft"
-keywords:
+tags:
   - intent-repository
   - intent-cms
   - metadata-inheritance
@@ -1316,7 +1316,7 @@ purpose: Button component styles
 update-instructions: |
   Follows design system tokens from ../tokens.css.
   Do not use raw colour values—always reference tokens.
-related-files:
+refersTo:
   - ../tokens.css
   - ../../components/Button.tsx
 */
@@ -1448,10 +1448,10 @@ All markdown files should include YAML frontmatter with this structure:
 title: "Document Title"
 description: "Brief description of the document"
 author: "Author Name"
-date: 2026-01-30
-lastmod: 2026-01-30
+created: 2026-01-30
+modified: 2026-01-30
 version: "0.1.0"
-keywords:
+tags:
   - keyword1
   - keyword2
 schema:
@@ -1464,7 +1464,7 @@ intent:
   purpose: "What this document achieves"
   audience: "Who should read this"
 
-related-files:
+refersTo:
   - ./related-doc.md
   - ../mx-config/MX.yaml
 

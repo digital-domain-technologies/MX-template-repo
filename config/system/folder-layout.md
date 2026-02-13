@@ -2,10 +2,10 @@
 title: "Folder Layout"
 description: "Single source of truth for the repository structure."
 author: "{{OWNER_NAME}}"
-date: {{DATE}}
-lastmod: {{DATE}}
+created: {{DATE}}
+modified: {{DATE}}
 version: "0.1.0"
-keywords:
+tags:
   - folder-structure
   - repository-layout
 schema:
@@ -17,7 +17,7 @@ intent:
   purpose: "Document the repository structure as single source of truth"
   audience: "developers, AI agents"
 
-related-files:
+refersTo:
   - ../../MX.yaml
   - ../../README.md
 

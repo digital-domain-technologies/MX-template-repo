@@ -2,10 +2,10 @@
 title: "Learnings"
 description: "Battle-tested rules from actual mistakes and discoveries in {{PROJECT_NAME}}."
 author: "{{OWNER_NAME}}"
-date: {{DATE}}
-lastmod: {{DATE}}
+created: {{DATE}}
+modified: {{DATE}}
 version: "0.1.0"
-keywords:
+tags:
   - learnings
   - best-practices
   - mistakes
@@ -19,7 +19,7 @@ intent:
   purpose: "Capture institutional knowledge and prevent repeated mistakes"
   audience: "all contributors"
 
-related-files:
+refersTo:
   - CLAUDE.md
   - master-mx.yaml
 

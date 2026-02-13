@@ -2,10 +2,10 @@
 title: "Template Usage Guide"
 description: "How to use this MX Template Repository to create a new Intent Repository-compliant project."
 author: "Tom Cranstoun"
-date: 2026-01-30
-lastmod: 2026-01-30
+created: 2026-01-30
+modified: 2026-01-30
 version: "1.0.0"
-keywords:
+tags:
   - template
   - intent-repository
   - mx

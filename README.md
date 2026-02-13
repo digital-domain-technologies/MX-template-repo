@@ -2,11 +2,11 @@
 title: "{{PROJECT_NAME}}"
 description: "{{PROJECT_DESCRIPTION}}"
 author: "{{OWNER_NAME}}"
-date: {{DATE}}
-lastmod: {{DATE}}
+created: {{DATE}}
+modified: {{DATE}}
 version: "0.1.0"
 status: "development"
-keywords:
+tags:
   - {{KEYWORD_1}}
   - {{KEYWORD_2}}
 canonical: "{{PROJECT_URL}}"
@@ -20,7 +20,7 @@ intent:
   purpose: "Primary entry point and overview for the {{PROJECT_NAME}} repository"
   audience: "developers, contributors, AI agents"
 
-related-files:
+refersTo:
   - ONBOARDING.md
   - CLAUDE.md
   - LEARNINGS.md

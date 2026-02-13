@@ -2,10 +2,10 @@
 title: "Onboarding Guide"
 description: "Getting started guide for new contributors to {{PROJECT_NAME}}."
 author: "{{OWNER_NAME}}"
-date: {{DATE}}
-lastmod: {{DATE}}
+created: {{DATE}}
+modified: {{DATE}}
 version: "0.1.0"
-keywords:
+tags:
   - onboarding
   - getting-started
   - contributing
@@ -19,7 +19,7 @@ intent:
   purpose: "Help new contributors get started with the repository"
   audience: "new developers, contributors"
 
-related-files:
+refersTo:
   - README.md
   - CLAUDE.md
   - master-mx.yaml

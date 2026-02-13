@@ -2,10 +2,10 @@
 title: "CLAUDE.md - AI Agent Guidance"
 description: "Guidance for Claude Code and other AI assistants working with this Intent Repository."
 author: "{{OWNER_NAME}}"
-date: {{DATE}}
-lastmod: {{DATE}}
+created: {{DATE}}
+modified: {{DATE}}
 version: "0.1.0"
-keywords:
+tags:
   - claude-code
   - sop-guidance
   - intent-repository
@@ -20,7 +20,7 @@ intent:
   audience: "AI agents, Claude Code"
   priority: "high"
 
-related-files:
+refersTo:
   - master-mx.yaml
   - MX.yaml
   - llms.txt
