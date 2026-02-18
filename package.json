@@ -4,9 +4,9 @@
     "update-instructions": "Update version when releasing, add dependencies as needed",
     "related-files": ["MX.yaml", "master-mx.yaml"]
   },
-  "name": "{{PROJECT_NAME}}",
+  "name": "mx-template-repo",
   "version": "0.1.0",
-  "description": "{{PROJECT_DESCRIPTION}}",
+  "description": "Template repository for MX projects",
   "private": true,
   "workspaces": [
     "packages/*"
